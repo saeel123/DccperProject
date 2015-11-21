@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <h1>Project Management</h1>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col-xs-6 col-md-2">
+        <h2>Project Members</h2>
+            <%= render('members/index') %>
+      </div>
+       <div class="col-xs-12 col-md-10">
+        <img src="..." alt="..." class="img-rounded">
+
+        <button type="button" class="btn btn-default btn-sm">Small button</button>
+
+         <div class="table-responsive">
+         <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Task name</th>
+                <th>Start date</th>
+                <th>End date</th>
+                <th>Estimated hour</th>
+                <th>Hour spent</th>
+                <th>Shedule varience</th>
+                <th colspan="3"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @tasks.each do |task| %>
+                <tr>
+                  <td><%= task.task_name %></td>
+                  <td><%= task.start_date %></td>
+                  <td><%= task.end_date %></td>
+                  <td><%= task.estimated_hour %></td>
+                  <td><%= task.hour_spent %></td>
+                  <td><%= task.shedule_varience %></td>
+                  
+                </tr>
+              <% end %>
+            </tbody>
+        </table>
+        </div>
+       </div>
+    </div>
+     
+    
+
+  </div>
+</div>
+
+
+
+
+
+
+
+

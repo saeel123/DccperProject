@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_name: MyString
+  start_date: 2015-11-21
+  end_date: 2015-11-21
+  estimated_hour: 1.5
+  hour_spent: 1.5
+  shedule_varience: 1.5
+
+two:
+  task_name: MyString
+  start_date: 2015-11-21
+  end_date: 2015-11-21
+  estimated_hour: 1.5
+  hour_spent: 1.5
+  shedule_varience: 1.5

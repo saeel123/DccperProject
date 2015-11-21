@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+
+
+
+    <% @members.each do |member| %>
+      <div>
+      <%= link_to tasks_path(:member => member.id) do %>
+
+        <%= member.firstname %>
+        <%= member.lastname %>
+       <% end %>
+      </div>
+    <% end %>
+
+
+
+
+
