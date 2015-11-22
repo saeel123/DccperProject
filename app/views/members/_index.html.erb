@@ -4,13 +4,16 @@
 
 
     <% @members.each do |member| %>
-      <div>
+    <div class="row" >
+          <div class="col-md-12 side-items">
       <%= link_to tasks_path(:member => member.id) do %>
 
         <%= member.firstname %>
         <%= member.lastname %>
        <% end %>
       </div>
+      </div>
+
     <% end %>
 
 

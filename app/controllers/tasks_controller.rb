@@ -6,12 +6,14 @@ class TasksController < ApplicationController
   def index
 
     if (params[:member])
-      @tasks = Member.find(params[:member]).tasks
+      @tasks = Member.find(params[:member]).tasks.paginate(:page => params[:page], :per_page => 5)
+      @member = Member.find(params[:member])
     else
-      @tasks = Member.find(1).tasks
+      @tasks = Member.find(1).tasks.paginate(:page => params[:page], :per_page => 5)
+      @member = Member.find(1)
     end
     # @tasks = Member.find(params[:id]).tasks || Member.find(1).tasks
-    @members = Member.all
+    @members = Member.all.paginate(:page => params[:page])
 
   end
 
