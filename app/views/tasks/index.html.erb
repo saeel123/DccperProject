@@ -1,54 +1,53 @@
-<p id="notice"><%= notice %></p>
 
 
-
-<nav class="navbar navbar-default">
-
-
-          <div class=" project_heading"> <h1>Project Management</h1></div>
+<div class="container body-padding">
 
 
-        <ul class="nav navbar-nav navbar-right">
-        <li>   <button type="button" class="btn btn-link  btn-setiing">
-        <span class="glyphicon glyphicon-cog" aria-hidden="true"> <%= link_to "settings", settings_path %></li>
+<div class="row ">
 
-      </ul>
+<nav class="navbar nav-size col-md-12">
+  <div class=" project_heading">
+    <h1>Project Management</h1>
+  </div>
+  <ul class="nav navbar-nav navbar-right">
+    <li>   <button type="button" class="btn btn-link  btn-setiing">
+      <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <%= link_to "settings", settings_path %></button>
+    </li>
+  </ul>
+</nav>
+</div>
 
 
-    </nav>
-
-
-
-
-    <div class="row test">
-      <div class="col-xs-6 col-md-2 side-bar">
-        <h2 class="side-title">Project Members</h2>
-
-            <%= render('members/index') %>
+<div class="row ">
+  <div class="col-md-2 side-bar">
+      <div class="row">
+         <div class="col-md-12 side-title">
+          <h2 class="">Project Members</h2>
+         </div>
       </div>
+    <%= render('members/index') %>
+  </div>
 
-       <div class="col-md-10">
-        <div class="row">
-        <div class="col-md-12">
+  <div class="col-md-10 ">
+    <div class="row">
+      <div class="col-md-12">
         <div class="avatar">
-        <%= image_tag @member.avatar.url(:medium) %>
-         </div>
-         <div class="member_name text-capitalize">
-        <%= @member.lastname + " " + @member.firstname %>
-         </div>
-
+          <%= image_tag @member.avatar.url(:thumb) %>
         </div>
-
-        <div class="col-md-12">
-         <button type="button" class="btn btn-default report-btn inverse">
+        <div class="member_name text-capitalize">
+          <%= @member.lastname + " " + @member.firstname %>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-default report-btn inverse">
            Create Report
         </button>
-        </div>
-
-
-        <div class="col-md-12">
-         <div class="table-responsive">
-         <table class="table table-bordered table-text ">
+      </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-text table-striped">
             <thead class="">
               <tr class="table-header  table-text">
                 <th>Task name</th>
@@ -75,12 +74,11 @@
               <% end %>
             </tbody>
         </table>
-        <div class="pagi">
-       <%= will_paginate @posts, renderer: BootstrapPagination::Rails, previous_label: "|<", next_label: ">|", inner_window: 1, outer_window: 0 %>
-       </div>
-        </div>
-        </div>
-       </div>
+      </div>
+      <div class="pagi">
+        <%= will_paginate @posts, renderer: BootstrapPagination::Rails, previous_label: "|<", next_label: ">|", inner_window: 1, outer_window: 0 %>
+      </div>
+  </div>
+</div>
+</div>
 
-       </div>
-    </div>

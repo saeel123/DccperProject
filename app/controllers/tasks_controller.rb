@@ -13,7 +13,7 @@ class TasksController < ApplicationController
       @member = Member.find(1)
     end
     # @tasks = Member.find(params[:id]).tasks || Member.find(1).tasks
-    @members = Member.all.paginate(:page => params[:page])
+    @members = Member.all
 
   end
 

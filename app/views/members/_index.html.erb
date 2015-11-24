@@ -1,22 +1,11 @@
 <p id="notice"><%= notice %></p>
-
-
-
-
-    <% @members.each do |member| %>
-    <div class="row" >
-          <div class="col-md-12 side-items">
-      <%= link_to tasks_path(:member => member.id) do %>
-
+<% @members.each do |member| %>
+    <div class="row .linkStyle" >
+      <div class="col-md-12 side-items text-capitalize ">
+        <%= link_to tasks_path(:member => member.id) do %>
         <%= member.firstname %>
         <%= member.lastname %>
        <% end %>
       </div>
-      </div>
-
-    <% end %>
-
-
-
-
-
+    </div>
+<% end %>

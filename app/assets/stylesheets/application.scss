@@ -18,14 +18,28 @@
  *= require_self
  */
 
+html,
+body,
+ul,
+ol {
+   margin: 0;
+  padding: 0;
+}
+
 .btn-setiing{
 	float: right;
 	margin-bottom: -60px;
     margin-top: -47px;
 }
 
+a{
+	text-decoration: none;
+}
+
+
+
 .navbar-header{
-	
+
 
 }
 
@@ -39,20 +53,22 @@
     border-bottom: solid #303330 1px;
    padding-bottom: 50px;
     padding-top: 10px;
+
+		a{
+			text-decoration: none;
+		}
 }
 
 .side-title{
 	text-align: center;
 	border-bottom: solid #303330 1px;
-	    padding-bottom: 23px;
+	padding-bottom: 23px;
 }
 
-.test{
-	margin-right: 0;
-}
 
 .side-bar{
 	background: #E4E4E4;
+
 }
 
 .navbar{
@@ -80,7 +96,7 @@
 	 color: white;
 	 height: 75px;
 
-	 
+
 }
 .table-text,th{
 	text-align: center;
@@ -88,4 +104,16 @@
 
 .pagi{
 	text-align: center;
+}
+
+.table-content{
+	width: 750px;
+}
+
+.nav-size{
+
+}
+
+.body-padding{
+	margin-top: 20px;
 }
