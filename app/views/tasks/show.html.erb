@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task name:</strong>
+  <%= @task.task_name %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @task.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @task.end_date %>
+</p>
+
+<p>
+  <strong>Estimated hour:</strong>
+  <%= @task.estimated_hour %>
+</p>
+
+<p>
+  <strong>Hour spent:</strong>
+  <%= @task.hour_spent %>
+</p>
+
+<p>
+  <strong>Shedule varience:</strong>
+  <%= @task.shedule_varience %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
